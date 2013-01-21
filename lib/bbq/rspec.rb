@@ -17,6 +17,8 @@ module Bbq
     extend RSpec::Matchers::DSL
 
     matcher :see do |text|
+      @locator = nil
+
       chain :within do |locator|
         @locator = locator
       end
